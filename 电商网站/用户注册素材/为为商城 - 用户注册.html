@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://www.mallvv.com/shop/login-register.html -->
+<html lang="zh"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>为为商城 - 用户注册</title>
+<meta name="keywords" content="为为商城">
+<meta name="description" content="为为商城">
+<style type="text/css">								body {
+								_behavior: url(http://www.mallvv.com/shop/templates/default/css/csshover.htc);
+
+}</style>
+<link rel="icon" href="http://www.homevv.com/favicon.ico">
+<link href="./为为商城 - 用户注册_files/base.css" rel="stylesheet" type="text/css">
+<link href="./为为商城 - 用户注册_files/home_header.css" rel="stylesheet" type="text/css">
+<link href="./为为商城 - 用户注册_files/home_login.css" rel="stylesheet" type="text/css">
+<link href="./为为商城 - 用户注册_files/font-awesome.min.css" rel="stylesheet">
+<!--[if IE 7]>
+  <link rel="stylesheet" href="http://www.mallvv.com/shop/resource/font/font-awesome/css/font-awesome-ie7.min.css">
+<![endif]-->
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="http://www.mallvv.com/data/resource/js/html5shiv.js"></script>
+      <script src="http://www.mallvv.com/data/resource/js/respond.min.js"></script>
+<![endif]-->
+<!--[if IE 6]>
+<script src="http://www.mallvv.com/data/resource/js/IE6_PNG.js"></script>
+<script>
+DD_belatedPNG.fix('.pngFix');
+</script>
+<script>
+// <![CDATA[
+if((window.navigator.appName.toUpperCase().indexOf("MICROSOFT")>=0)&&(document.execCommand))
+try{
+document.execCommand("BackgroundImageCache", false, true);
+   }
+catch(e){}
+// ]]>
+</script>
+<![endif]-->
+<script>
+var COOKIE_PRE = 'D2D4_';var _CHARSET = 'utf-8';var SITEURL = 'http://www.mallvv.com/shop';var SHOP_SITE_URL = 'http://www.mallvv.com/shop';var RESOURCE_SITE_URL = 'http://www.mallvv.com/data/resource';var RESOURCE_SITE_URL = 'http://www.mallvv.com/data/resource';var SHOP_TEMPLATES_URL = 'http://www.mallvv.com/shop/templates/default';
+</script>
+<script src="./为为商城 - 用户注册_files/jquery.js.下载"></script>
+<script src="./为为商城 - 用户注册_files/common.js.下载" charset="utf-8"></script>
+<script src="./为为商城 - 用户注册_files/jquery.ui.js.下载"></script>
+<script src="./为为商城 - 用户注册_files/jquery.validation.min.js.下载"></script>
+<script src="./为为商城 - 用户注册_files/jquery.masonry.js.下载"></script>
+<script src="./为为商城 - 用户注册_files/dialog.js.下载" id="dialog_js" charset="utf-8"></script><link href="./为为商城 - 用户注册_files/dialog.css" rel="stylesheet" type="text/css">
+<script src="./为为商城 - 用户注册_files/home-header.js.下载" charset="utf-8"></script>
+<script type="text/javascript">
+var PRICE_FORMAT = '&yen;% s ';
+$(function() {
+			//首页左侧分类菜单
+			//			$(".category ul.menu").find("li").each(
+			//				function() {
+			//					$(this).hover(
+			//						function() {
+			//							var cat_id = $(this).attr("cat_id");
+			//							var menu = $(this).find("div[cat_menu_id='" + cat_id + "']");
+			//							menu.show();
+			//							$(this).addClass("hover");
+			//							var menu_height = menu.height();
+			//							if (menu_height < 60) menu.height(80);
+			//							menu_height = menu.height();
+			//							var li_top = $(this).position().top;
+			//							$(menu).css("top", -li_top + 38);
+			//						},
+			//						function() {
+			//							$(this).removeClass("hover");
+			//							var cat_id = $(this).attr("cat_id");
+			//							$(this).find("div[cat_menu_id='" + cat_id + "']").hide();
+			//						}
+			//					);
+			//				}
+			//			);
+			$(".head-user-menu dl").hover(function() {
+					$(this).addClass("hover");
+				},
+				function() {
+					$(this).removeClass("hover");
+				});
+			$('.head-user-menu .my-mall').mouseover(function() { // 最近浏览的商品
+				load_history_information();
+				$(this).unbind('mouseover');
+			});
+			$('.head-user-menu .my-cart').mouseover(function() { // 运行加载购物车
+				load_cart_information();
+				$(this).unbind('mouseover');
+			});
+			$('#button').click(function() {
+				if ($('#keyword').val() == '') {
+					return false;
+				}
+			});});
+
+$(function() {
+			//search
+			var act = "login";
+if (act == "store_list") {
+	$("#search").children('ul').children('li:eq(1)').addClass("current");
+	$("#search").children('ul').children('li:eq(0)').removeClass("current");
+}
+$("#search").children('ul').children('li').click(function() {
+	$(this).parent().children('li').removeClass("current");
+	$(this).addClass("current");
+	$('#search_act').attr("value", $(this).attr("act"));
+	$('#keyword').attr("placeholder", $(this).attr("title"));
+});
+$("#keyword").blur();
+
+});</script>
+<style id="tsbrowser_video_independent_player_style" type="text/css">                                                            [tsbrowser_force_max_size] {                                                   width: 100% !important;                                                      height: 100% !important;                                                     left: 0px !important;                                                        top: 0px !important;                                                         margin: 0px !important;                                                      padding: 0px !important;                                                   }                                                                            [tsbrowser_force_fixed] {                                                      position: fixed !important;                                                  z-index: 9999 !important;                                                    background: black !important;                                              }                                                                            [tsbrowser_force_hidden] {                                                     opacity: 0 !important;                                                       z-index: 0 !important;                                                     }                                                                            [tsbrowser_hide_scrollbar] {                                                   overflow: hidden !important;                                               }</style></head>
+<body>
+<!-- PublicTopLayout Begin -->
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="public-top-layout w">
+  <div class="topbar wrapper">
+ 		<div class="address-select">
+ 		    <div class="your-address">
+				<span>送至:</span>
+				<em>北京</em>
+				<i></i>
+			</div>
+			<ul class="deliver-address">
+               <!-- <li class="selected"><a href="javascript:void(0)">北京</a></li>
+                <li><a href="javascript:void(0)">上海</a></li>
+                <li><a href="javascript:void(0)">深圳</a></li>
+                <li><a href="javascript:void(0)">天津</a></li>
+                <li><a href="javascript:void(0)">广州</a></li>
+                <li><a href="javascript:void(0)">河南</a></li>
+                <li><a href="javascript:void(0)">河北</a></li>
+                <li><a href="javascript:void(0)">山西</a></li>
+                <li><a href="javascript:void(0)">陕西</a></li>
+                <li><a href="javascript:void(0)">青岛</a></li>
+                <li><a href="javascript:void(0)">上海</a></li>
+                <li><a href="javascript:void(0)">深圳</a></li>
+                <li><a href="javascript:void(0)">天津</a></li>
+                <li><a href="javascript:void(0)">广州</a></li>
+                <li><a href="javascript:void(0)">河南</a></li>
+                <li><a href="javascript:void(0)">河北</a></li>
+                <li><a href="javascript:void(0)">山西</a></li>
+                <li><a href="javascript:void(0)">陕西</a></li>
+                <li><a href="javascript:void(0)">青岛</a></li> -->
+            </ul>
+		</div>
+  	
+    <div class="user-entry">
+            您好，欢迎来到 <a rel="nofollow" href="http://www.mallvv.com/" title="首页" alt="首页">为为商城</a> <span><a rel="nofollow" class="login_a" href="http://www.mallvv.com/shop/login-index.html">请登录</a></span> <span>&nbsp;&nbsp;<a rel="nofollow" href="http://www.mallvv.com/shop/login-register.html">免费注册</a></span>
+            <!--<span style="margin-left:10px;"><a href="index.php?act=invite" style="color:red;">邀请返利</a></span>-->
+    </div>
+    <div class="quick-menu">
+	  <dl>
+        <dt><a rel="nofollow" href="http://www.mallvv.com/shop/index.php?act=member_order">我的订单</a><i></i></dt>
+        <dd>
+          <ul>
+            <li><a rel="nofollow" href="http://www.mallvv.com/shop/index.php?act=member_order&amp;state_type=state_new">待付款订单</a></li>
+            <li><a rel="nofollow" href="http://www.mallvv.com/shop/index.php?act=member_order&amp;state_type=state_send">待确认收货</a></li>
+            <li><a rel="nofollow" href="http://www.mallvv.com/shop/index.php?act=member_order&amp;state_type=state_noeval">待评价交易</a></li>
+          </ul>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a rel="nofollow" href="http://www.mallvv.com/shop/index.php?act=show_joinin&amp;op=index">商家中心</a><i></i></dt>
+        <dd>
+          <ul>
+            <li><a rel="nofollow" href="http://www.mallvv.com/shop/index.php?act=show_joinin&amp;op=index">申请入驻</a></li>
+            <li><a rel="nofollow" href="http://www.mallvv.com/shop/index.php?act=seller_login&amp;op=show_login">我的店铺</a></li>
+          </ul>
+        </dd>
+      </dl>
+      <dl class="mobile-shop">
+        <dt><a rel="nofollow" href="http://www.homevv.com/app2015/index.html">手机为为</a></dt>
+      </dl>
+      <dl>
+        <dt>客户服务<i></i></dt>
+        <dd>
+          <ul>
+            <li><a rel="nofollow" href="http://www.mallvv.com/shop/article_cate-2.html">帮助中心</a></li>
+            <li><a rel="nofollow" href="http://www.mallvv.com/shop/article_cate-5.html">售后服务</a></li>
+            <li><a rel="nofollow" href="http://www.mallvv.com/shop/article_cate-6.html">客服中心</a></li>
+          </ul>
+        </dd>
+      </dl>
+      	  <dl class="weixin">
+        <dt>关注我们<i></i></dt>
+        <dd>
+          <h4>扫描二维码<br>
+            关注商城微信号</h4>
+          <img src="./为为商城 - 用户注册_files/05151752275186226.gif"> </dd>
+        </dl>
+    </div>
+  </div>
+</div>
+<style type="text/css">#login-form #captcha {
+	width: 115px !important;
+}
+
+label.error {
+	clear: both;
+	display: block;
+	color: red !important;
+	text-align: left;
+	margin-left: 64px;
+	margin-top: 38px;
+	*margin-top: 0px !important;
+	position: absolute;
+}
+
+.login-con div {
+	margin-bottom: 30px !important;
+}
+
+.login-con .yzm {
+	position: relative;
+}
+
+.login-con .w50 {
+	width: 100px !important;
+}
+
+.yzm img {
+	float: right;
+	margin-right: 20px;
+	z-index: 0;
+}
+
+.yzm a {
+	width: 90px !important;
+	height: 26px;
+	display: block;
+	z-index: 1;
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+	background: #fff;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}</style>
+<script>$(document).ready(function() {
+			$("#login-form").validate({
+						errorPlacement: function(error, element) {
+							var error_td = element.parent();
+							error_td.find('label').hide();
+							error_td.append(error);
+						},
+						onkeyup: false,
+						rules: {
+							account: "required",
+							password: "required",
+captcha: {
+		required: true,
+		remote: {
+			url: 'http://www.mallvv.com/shop/index.php?act=seccode&op=check&nchash=d81f1628',
+type: 'get',
+	data: {
+		captcha: function() {
+			return $('#captcha').val();
+		}
+	},
+	complete: function(data) {
+		if (data.responseText == 'false') {
+			document.getElementById('codeimage').src = 'http://www.mallvv.com/shop/index.php?act=seccode&op=makecode&nchash=d81f1628& t = ' + Math.random();
+}
+}
+}
+}},
+messages: {
+		account: "账号不能为空",
+		password: "密码不能为空",
+				captcha: {
+					required: '请输入验证码',
+					remote: '验证码错误'
+				}
+							}
+		});
+});
+</script>
+
+
+
+<!--//zmr>v92-->
+  
+<!-- PublicHeadLayout Begin -->
+<!-- 顶部广告展开效果-->
+<!-- 顶部广告展开效果-->
+<div class="header-wrap">
+  <header class="public-head-layout wrapper">
+    <h1 class="site-logo"><a href="http://www.mallvv.com/"><img title="为为商城 http://www.mallvv.com/" src="./为为商城 - 用户注册_files/05174866977471586.png" class="pngFix"></a></h1>
+        <div class="head-left" title="上海品牌家具建材一站式购物网站">
+    </div>
+        
+    <div id="search" class="head-search-bar">
+	<!--商品和店铺-->
+	 <div class="search_tips">
+	      <span><em>商品</em><i></i></span>
+	      <ul class="tab">
+            <li title="请输入您要搜索的商品关键字" act="search" class="current">商品</li>
+            <li title="请输入您要搜索的店铺关键字" act="store_list" class="current">店铺</li>
+          </ul>
+       </div>
+      <form class="search-form" method="get" action="http://www.mallvv.com/shop">
+      
+        <input type="hidden" value="search" id="search_act" name="act">
+
+         <input placeholder="请输入您要搜索的商品关键字" name="keyword" id="keyword" type="text" class="input-text" value="" maxlength="60" x-webkit-speech="" lang="zh-CN" onwebkitspeechchange="foo()" x-webkit-grammar="builtin:search">
+        <input type="submit" id="button" value="搜索" class="input-submit">
+      </form>
+	  <!--搜索关键字-->
+      <div class="keyword">
+      <!--热门搜索：-->
+        <ul>
+                    <li><a href="http://www.mallvv.com/shop/index.php?act=search&amp;op=index&amp;keyword=%E6%B2%99%E5%8F%91">沙发</a></li>
+                    <li><a href="http://www.mallvv.com/shop/index.php?act=search&amp;op=index&amp;keyword=%E5%BA%8A">床</a></li>
+                    <li><a href="http://www.mallvv.com/shop/index.php?act=search&amp;op=index&amp;keyword=%E7%93%B7%E7%A0%96">瓷砖</a></li>
+                    <li><a href="http://www.mallvv.com/shop/index.php?act=search&amp;op=index&amp;keyword=%E5%9C%B0%E6%9D%BF">地板</a></li>
+                    <li><a href="http://www.mallvv.com/shop/index.php?act=search&amp;op=index&amp;keyword=%E9%A4%90%E6%A1%8C">餐桌</a></li>
+                  </ul>
+      </div>
+    </div>
+    <div class="head-user-menu">
+      <dl class="my-cart">
+                <dt><span class="ico"></span>我的购物车<i class="arrow"></i></dt>
+        <dd>
+          <div class="sub-title">
+            <h4>最新加入的商品</h4>
+          </div>
+          <div class="incart-goods-box">
+            <div class="incart-goods"> <img class="loading" src="./为为商城 - 用户注册_files/loading.gif"> </div>
+          </div>
+          <div class="checkout"> <span class="total-price">共<i>0</i>种商品</span><a href="http://www.mallvv.com/shop/index.php?act=cart" class="btn-cart">结算购物车中的商品</a> </div>
+        </dd>
+      </dl>
+    </div>
+  </header>
+</div>
+<!-- PublicHeadLayout End -->
+
+<!-- publicNavLayout Begin -->
+<nav class="public-nav-layout">
+  <div class="wrapper">
+    <div class="all-category">
+      
+<div class="title"> <i></i>
+  <h3><a href="http://www.mallvv.com/shop/category.html">精选分类推荐</a></h3>
+</div>
+<div class="category">
+    <div class="menu">
+		        <div class="meau-list">
+            <a href="http://www.mallvv.com/shop/cate-4350-0-0-0-0-0-0-0-0.html" class="category-bt">建材</a>
+            <ul class="son-class">
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350023-0-0-0-0-0-0-0-0.html">基础建材</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350024-0-0-0-0-0-0-0-0.html">瓷砖/大理石/陶瓷</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350042-0-0-0-0-0-0-0-0.html">卫浴</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350052-0-0-0-0-0-0-0-0.html">集成吊顶</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350060-0-0-0-0-0-0-0-0.html">橱柜</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350071-0-0-0-0-0-0-0-0.html">淋浴房</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350084-0-0-0-0-0-0-0-0.html">地板/榻榻米</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350103-0-0-0-0-0-0-0-0.html">移门衣柜</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350108-0-0-0-0-0-0-0-0.html">墙纸</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350122-0-0-0-0-0-0-0-0.html">门窗</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350349-0-0-0-0-0-0-0-0.html">净水器/水处理</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350369-0-0-0-0-0-0-0-0.html">定制楼梯</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350376-0-0-0-0-0-0-0-0.html">保险箱</a></li>
+                        </ul>
+        </div>
+    	        <div class="meau-list">
+            <a href="http://www.mallvv.com/shop/cate-12349378-0-0-0-0-0-0-0-0.html" class="category-bt">家具家纺</a>
+            <ul class="son-class">
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350136-0-0-0-0-0-0-0-0.html">卧室</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350146-0-0-0-0-0-0-0-0.html">客厅</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350157-0-0-0-0-0-0-0-0.html">餐厅</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350168-0-0-0-0-0-0-0-0.html">书房</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350173-0-0-0-0-0-0-0-0.html">儿童房</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350191-0-0-0-0-0-0-0-0.html">办公家具</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350197-0-0-0-0-0-0-0-0.html">家饰</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350351-0-0-0-0-0-0-0-0.html">软装</a></li>
+                        	<li><a href="http://www.mallvv.com/shop/cate-12350360-0-0-0-0-0-0-0-0.html">家纺</a></li>
+                        </ul>
+        </div>
+    			<!--wen xin peng-->
+		<div class="meau-list last-ul">
+			<a class="category-bt">装修服务</a>
+			<ul class="son-class">
+				<li>
+					<a href="http://www.homevv.com/freeDesign_pc/index.html" target="_blank">免费设计</a>
+				</li>
+				<li>
+					<a href="http://www.homevv.com/gonglve/zxsj/" target="_blank">装修设计</a>
+				</li>
+                <li>
+					<a href="http://www.homevv.com/gonglve/shigong/" target="_blank">装修大全</a>
+				</li>
+                <li>
+					<a href="http://www.homevv.com/tuku/meitu/" target="_blank">装修效果图</a>
+				</li>
+                <li>
+					<a href="http://www.homevv.com/tuku/jjtc/" target="_blank">家居图册</a>
+				</li>
+                <li>
+					<a href="http://www.homevv.com/tuku/jpzt/" target="_blank">精品专题</a>
+				</li>
+                <li>
+					<a href="http://www.homevv.com/gonglve/" target="_blank">装修攻略</a>
+				</li>
+                <li>
+					<a href="http://www.homevv.com/gonglve/zhunbei/" target="_blank">装修前</a>
+				</li>
+                <li>
+					<a href="http://www.homevv.com/gonglve/zxsgong/" target="_blank">装修中</a>
+				</li>
+                <li>
+					<a href="http://www.homevv.com/gonglve/zxjs/" target="_blank">装修后</a>
+				</li>
+                <li>
+					<a href="http://www.homevv.com/gonglve/zxfs/" target="_blank">装修风水</a>
+				</li>
+                <li>
+					<a href="http://www.homevv.com/gonglve/xuetang/" target="_blank">家装学堂</a>
+				</li>
+                <li>
+					<a href="http://www.homevv.com/gonglve/shenghuo/" target="_blank">家居生活</a>
+				</li>
+                <li>
+					<a href="http://www.homevv.com/gonglve/zwhh/" target="_blank">植物花卉</a>
+				</li>
+                <li>
+					<a href="http://www.homevv.com/gonglve/cw/" target="_blank">宠物</a>
+				</li>
+                <li>
+					<a href="http://www.homevv.com/gonglve/DIY/" target="_blank">手工DIY</a>
+				</li>
+			</ul>
+		</div>
+    </div>
+</div>
+    </div>
+    <!--首页分类-->
+	<div class="home-list">
+		<ul class="site-menu">
+		  <li><a title="为为商城首页" class="child-a " href="http://www.mallvv.com/">首页</a></li>
+          				<li class="hover-list"><a title="建材商城" href="http://www.mallvv.com/shop/top_channel_menu-index.html&amp;actid=4350" class="child-a">建材</a></li>
+		  				<li class="hover-list"><a title="家具家纺商城" href="http://www.mallvv.com/shop/top_channel_menu-index.html&amp;actid=12349378" class="child-a">家具家纺</a></li>
+		  		  		  <!--li>
+			<a class="child-a" href="http://www.mallvv.com/shop/groupbuy.html" > 抢购			</a>
+		  </li-->
+		  		  <li>
+			  <a title="品牌家具/品牌建材" class="child-a" href="http://www.mallvv.com/shop/brand.html"> 品牌			  </a>
+		 </li>
+		  		   <!--li>
+			<a class="child-a" href="http://www.mallvv.com/shop/integral.html" > 积分中心			</a>
+		   </li-->
+		  		  		  <!--<li><a class="child-a" href="http://www.mallvv.com/shop/special-special_list.html" > 专题</a></li> -->
+		  		  		  		  		  		  		  		  		  		  		  		  		  <li><a class="child-a" title="品牌店铺" href="http://www.mallvv.com/shop/index.php?act=store_list&amp;op=index">店铺</a></li>
+		  		  		  		  		  		  <li><a class="child-a" target="_blank" rel="nofollow" title="装修攻略" href="http://www.homevv.com/gonglve/">装修攻略</a></li>
+		  		  		  		  <li><a class="child-a" target="_blank" rel="nofollow" title="装修图库" href="http://www.homevv.com/tuku/meitu/">装修图库</a></li>
+		  		  		  		</ul>
+		<!--分类的下拉列表-->
+	   <div class="nav-classify">
+		   <div class="col-block">	  
+							
+						<div class="col-block-wrap top_menu_4350" data-alt="4350">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350023-0-0-0-0-0-0-0-0.html" target="_blank">基础建材</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350032-0-0-0-0-0-0-0-0.html" target="_blank">其他辅料</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350343-0-0-0-0-0-0-0-0.html" target="_blank">开关插座</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350344-0-0-0-0-0-0-0-0.html" target="_blank">油漆涂料</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350345-0-0-0-0-0-0-0-0.html" target="_blank">电线</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_4350" data-alt="4350">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350024-0-0-0-0-0-0-0-0.html" target="_blank">瓷砖/大理石/陶瓷</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350033-0-0-0-0-0-0-0-0.html" target="_blank">釉面砖</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350034-0-0-0-0-0-0-0-0.html" target="_blank">玻化砖</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350035-0-0-0-0-0-0-0-0.html" target="_blank">仿古砖</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350037-0-0-0-0-0-0-0-0.html" target="_blank">木纹砖</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350038-0-0-0-0-0-0-0-0.html" target="_blank">微晶石</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350039-0-0-0-0-0-0-0-0.html" target="_blank">抛光砖</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350040-0-0-0-0-0-0-0-0.html" target="_blank">大理石</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350041-0-0-0-0-0-0-0-0.html" target="_blank">瓷砖辅料</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350374-0-0-0-0-0-0-0-0.html" target="_blank">人造石</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350375-0-0-0-0-0-0-0-0.html" target="_blank">花岗石</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350381-0-0-0-0-0-0-0-0.html" target="_blank">陶瓷</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350382-0-0-0-0-0-0-0-0.html" target="_blank">金刚石</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350384-0-0-0-0-0-0-0-0.html" target="_blank">墙面砖</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_4350" data-alt="4350">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350042-0-0-0-0-0-0-0-0.html" target="_blank">卫浴</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350043-0-0-0-0-0-0-0-0.html" target="_blank">坐便器</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350044-0-0-0-0-0-0-0-0.html" target="_blank">坐便器盖板</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350049-0-0-0-0-0-0-0-0.html" target="_blank">龙头</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350160-0-0-0-0-0-0-0-0.html" target="_blank">卫浴套装</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_4350" data-alt="4350">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350052-0-0-0-0-0-0-0-0.html" target="_blank">集成吊顶</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350053-0-0-0-0-0-0-0-0.html" target="_blank">多功能组合电器</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350054-0-0-0-0-0-0-0-0.html" target="_blank">照明模块</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350055-0-0-0-0-0-0-0-0.html" target="_blank">扣板模块</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350056-0-0-0-0-0-0-0-0.html" target="_blank">换气模块</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350057-0-0-0-0-0-0-0-0.html" target="_blank">灯暖模块</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350058-0-0-0-0-0-0-0-0.html" target="_blank">暖风模块</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_4350" data-alt="4350">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350060-0-0-0-0-0-0-0-0.html" target="_blank">橱柜</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350061-0-0-0-0-0-0-0-0.html" target="_blank">整体橱柜</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350062-0-0-0-0-0-0-0-0.html" target="_blank">柜体</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350063-0-0-0-0-0-0-0-0.html" target="_blank">门板</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350064-0-0-0-0-0-0-0-0.html" target="_blank">台面</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350065-0-0-0-0-0-0-0-0.html" target="_blank">橱柜配件</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_4350" data-alt="4350">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350071-0-0-0-0-0-0-0-0.html" target="_blank">淋浴房</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350073-0-0-0-0-0-0-0-0.html" target="_blank">定制淋浴房</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_4350" data-alt="4350">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350084-0-0-0-0-0-0-0-0.html" target="_blank">地板/榻榻米</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350085-0-0-0-0-0-0-0-0.html" target="_blank">实木地板</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350087-0-0-0-0-0-0-0-0.html" target="_blank">强化复合地板</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350372-0-0-0-0-0-0-0-0.html" target="_blank">木地板</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350373-0-0-0-0-0-0-0-0.html" target="_blank">实木复合地板</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_4350" data-alt="4350">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350103-0-0-0-0-0-0-0-0.html" target="_blank">移门衣柜</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350104-0-0-0-0-0-0-0-0.html" target="_blank">衣柜移门</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350105-0-0-0-0-0-0-0-0.html" target="_blank">整体衣柜</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350106-0-0-0-0-0-0-0-0.html" target="_blank">隔断衣柜</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350107-0-0-0-0-0-0-0-0.html" target="_blank">折叠门</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350367-0-0-0-0-0-0-0-0.html" target="_blank">定制柜类</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_4350" data-alt="4350">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350108-0-0-0-0-0-0-0-0.html" target="_blank">墙纸</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350109-0-0-0-0-0-0-0-0.html" target="_blank">无纺布墙纸</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350111-0-0-0-0-0-0-0-0.html" target="_blank">纯纸墙纸</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_4350" data-alt="4350">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350122-0-0-0-0-0-0-0-0.html" target="_blank">门窗</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350123-0-0-0-0-0-0-0-0.html" target="_blank">防盗门</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350124-0-0-0-0-0-0-0-0.html" target="_blank">木门</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350125-0-0-0-0-0-0-0-0.html" target="_blank">阳台窗</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350378-0-0-0-0-0-0-0-0.html" target="_blank">定制门</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350379-0-0-0-0-0-0-0-0.html" target="_blank">定制窗</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350380-0-0-0-0-0-0-0-0.html" target="_blank">推拉铝门</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350383-0-0-0-0-0-0-0-0.html" target="_blank">福斯玛门</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_4350" data-alt="4350">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350349-0-0-0-0-0-0-0-0.html" target="_blank">净水器/水处理</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350350-0-0-0-0-0-0-0-0.html" target="_blank">净水器/水处理</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_4350" data-alt="4350">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350369-0-0-0-0-0-0-0-0.html" target="_blank">定制楼梯</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350370-0-0-0-0-0-0-0-0.html" target="_blank">定制柜</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350371-0-0-0-0-0-0-0-0.html" target="_blank">木质楼梯</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_4350" data-alt="4350">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350376-0-0-0-0-0-0-0-0.html" target="_blank">保险箱</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350377-0-0-0-0-0-0-0-0.html" target="_blank">保险箱</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_12349378" data-alt="12349378">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350136-0-0-0-0-0-0-0-0.html" target="_blank">卧室</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350137-0-0-0-0-0-0-0-0.html" target="_blank">床</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350138-0-0-0-0-0-0-0-0.html" target="_blank">床垫</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350139-0-0-0-0-0-0-0-0.html" target="_blank">床头柜</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350140-0-0-0-0-0-0-0-0.html" target="_blank">衣柜</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350141-0-0-0-0-0-0-0-0.html" target="_blank">斗柜</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350142-0-0-0-0-0-0-0-0.html" target="_blank">妆台镜/妆凳</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350143-0-0-0-0-0-0-0-0.html" target="_blank">穿衣镜/衣帽架</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350144-0-0-0-0-0-0-0-0.html" target="_blank">床尾凳</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350145-0-0-0-0-0-0-0-0.html" target="_blank">卧室套装</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_12349378" data-alt="12349378">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350146-0-0-0-0-0-0-0-0.html" target="_blank">客厅</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350147-0-0-0-0-0-0-0-0.html" target="_blank">沙发</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350148-0-0-0-0-0-0-0-0.html" target="_blank">茶几/边几</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350149-0-0-0-0-0-0-0-0.html" target="_blank">电视柜</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350150-0-0-0-0-0-0-0-0.html" target="_blank">鞋柜</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350151-0-0-0-0-0-0-0-0.html" target="_blank">酒柜/装饰柜</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350153-0-0-0-0-0-0-0-0.html" target="_blank">休闲椅/凳</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350154-0-0-0-0-0-0-0-0.html" target="_blank">间厅/玄关柜</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350156-0-0-0-0-0-0-0-0.html" target="_blank">客厅套装</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_12349378" data-alt="12349378">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350157-0-0-0-0-0-0-0-0.html" target="_blank">餐厅</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350158-0-0-0-0-0-0-0-0.html" target="_blank">餐桌</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350165-0-0-0-0-0-0-0-0.html" target="_blank">餐椅</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350166-0-0-0-0-0-0-0-0.html" target="_blank">餐边柜/餐车</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350167-0-0-0-0-0-0-0-0.html" target="_blank">餐厅套装</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_12349378" data-alt="12349378">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350168-0-0-0-0-0-0-0-0.html" target="_blank">书房</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350169-0-0-0-0-0-0-0-0.html" target="_blank">书桌/工作台</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350170-0-0-0-0-0-0-0-0.html" target="_blank">书柜/书架</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350171-0-0-0-0-0-0-0-0.html" target="_blank">书椅/转椅</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350172-0-0-0-0-0-0-0-0.html" target="_blank">书房套装</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_12349378" data-alt="12349378">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350173-0-0-0-0-0-0-0-0.html" target="_blank">儿童房</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350174-0-0-0-0-0-0-0-0.html" target="_blank">儿童床</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350175-0-0-0-0-0-0-0-0.html" target="_blank">儿童床垫</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350176-0-0-0-0-0-0-0-0.html" target="_blank">儿童床头柜</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350177-0-0-0-0-0-0-0-0.html" target="_blank">儿童衣柜</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350178-0-0-0-0-0-0-0-0.html" target="_blank">儿童书桌/电脑台</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350180-0-0-0-0-0-0-0-0.html" target="_blank">儿童柜类</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350181-0-0-0-0-0-0-0-0.html" target="_blank">儿童房套装</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_12349378" data-alt="12349378">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350191-0-0-0-0-0-0-0-0.html" target="_blank">办公家具</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350193-0-0-0-0-0-0-0-0.html" target="_blank">办公桌</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350194-0-0-0-0-0-0-0-0.html" target="_blank">文件柜/置物柜</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350195-0-0-0-0-0-0-0-0.html" target="_blank">办公椅</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350355-0-0-0-0-0-0-0-0.html" target="_blank">办公沙发</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350356-0-0-0-0-0-0-0-0.html" target="_blank">会议桌</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350357-0-0-0-0-0-0-0-0.html" target="_blank">服务台</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350358-0-0-0-0-0-0-0-0.html" target="_blank">接待桌</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_12349378" data-alt="12349378">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350197-0-0-0-0-0-0-0-0.html" target="_blank">家饰</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350199-0-0-0-0-0-0-0-0.html" target="_blank">布艺织物</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350200-0-0-0-0-0-0-0-0.html" target="_blank">香薰制品</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350346-0-0-0-0-0-0-0-0.html" target="_blank">家居摆件</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350365-0-0-0-0-0-0-0-0.html" target="_blank">餐具/茶具</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350366-0-0-0-0-0-0-0-0.html" target="_blank">挂钟</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_12349378" data-alt="12349378">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350351-0-0-0-0-0-0-0-0.html" target="_blank">软装</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350352-0-0-0-0-0-0-0-0.html" target="_blank">窗帘</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350353-0-0-0-0-0-0-0-0.html" target="_blank">壁纸</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350354-0-0-0-0-0-0-0-0.html" target="_blank">软包</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  			
+						<div class="col-block-wrap top_menu_12349378" data-alt="12349378">
+						<a class="t" href="http://www.mallvv.com/shop/cate-12350360-0-0-0-0-0-0-0-0.html" target="_blank">家纺</a>
+						  <ul class="server-list">
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350361-0-0-0-0-0-0-0-0.html" target="_blank">被子/毯子</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350362-0-0-0-0-0-0-0-0.html" target="_blank">凉席</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350363-0-0-0-0-0-0-0-0.html" target="_blank">床上用品</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350364-0-0-0-0-0-0-0-0.html" target="_blank">床上四件套</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  							  <li class="l hl"><a href="http://www.mallvv.com/shop/cate-12350368-0-0-0-0-0-0-0-0.html" target="_blank">布艺制品</a></li>
+							  <!--li class="l "><a href="#" target="_blank">淋浴花洒</a></li-->
+						  						  </ul>
+					  </div>
+			  		   </div>
+	   </div>
+   </div>
+</div></nav>
+    <div class="nch-breadcrumb-layout">
+  </div>
+<style type="text/css">
+.public-top-layout, .head-app, .head-search-bar, .head-user-menu, .public-nav-layout, .nch-breadcrumb-layout, #faq {
+	display: none !important;
+}
+.public-head-layout {
+	margin: 10px auto -10px auto;
+}
+.wrapper {
+	width: 1000px;
+}
+#footer {
+	border-top: none!important;
+	padding-top: 30px;
+}
+.register-style div{margin-bottom:20px;}
+label.error {
+	position:absolute;
+	clear:both;
+    display: block;
+    color: red !important;
+    text-align: left !important;
+    margin-left: 64px;
+    margin-top: 40px;
+    *position:relative !important;
+    *margin-top: 0px !important;
+}
+.agree-wrap label.error{
+margin-top:25px !important;
+margin-left:40px;
+}
+.code-success{
+	width:150px;
+	font-size:14px;
+	margin-left:360px;
+	position:absolute;
+	line-height:45px !important;
+	display:none;
+}
+</style>
+<!--<div class="nc-login-layout">
+  <div class="nc-login">
+    <div class="nc-login-title">
+      <h3>用户注册</h3>
+    </div>
+    <div class="nc-login-content">
+      <form id="register_form" method="post" action="http://www.mallvv.com/shop/index.php?act=login&op=usersave">
+      <input type='hidden' name='formhash' value='glmFPTsHgTL5MprNoQChjVySnsKezbB' />        <dl>
+          <dt>用户名</dt>
+          <dd style="min-height:54px;">
+            <input type="text" id="user_name" name="user_name" class="text tip" title="3-15位字符，可由中文、英文、数字及“_”、“-”组成" autofocus />
+            <label></label>
+          </dd>
+        </dl>
+        <dl>
+          <dt>设置密码</dt>
+          <dd style="min-height:54px;">
+            <input type="password" id="password" name="password" class="text tip" title="6-20位字符，可由英文、数字及标点符号组成" />
+            <label></label>
+          </dd>
+        </dl>
+        <dl>
+          <dt>确认密码</dt>
+          <dd style="min-height:54px;">
+            <input type="password" id="password_confirm" name="password_confirm" class="text tip" title="请再次输入您的密码"/>
+            <label></label>
+          </dd>
+        </dl>
+        <dl>
+          <dt>邮箱</dt>
+          <dd style="min-height:54px;">
+            <input type="text" id="email" name="email" class="text tip" title="请输入常用的邮箱，将用来找回密码、接受订单通知等" />
+            <label></label>
+          </dd>
+        </dl>
+                <dl>
+          <dt>验证码</dt>
+          <dd style="min-height:54px;">
+            <input type="text" id="captcha" name="captcha" class="text w50 fl tip" maxlength="4" size="10" title="请输入验证码，不区分大小写" />
+            <img src="index.php?act=seccode&op=makecode&nchash=d81f1628" title="" name="codeimage" border="0" id="codeimage" class="fl ml5"/> <a href="javascript:void(0)" class="ml5" onclick="javascript:document.getElementById('codeimage').src='index.php?act=seccode&op=makecode&nchash=d81f1628&t=' + Math.random();">看不清，换一张</a>
+            <label></label>
+          </dd>
+        </dl>
+                <dl>
+          <dt>&nbsp;</dt>
+          <dd>
+            <input type="submit" id="Submit" value="立即注册" class="submit" title="立即注册" />
+            <input name="agree" type="checkbox" class="vm ml10" id="clause" value="1" checked="checked" />
+            <span for="clause" class="ml5">阅读并同意<a href="http://www.mallvv.com/shop/document-agreement.html" target="_blank" class="agreement" title="阅读并同意">服务协议</a></span>
+            <label></label>
+          </dd>
+        </dl>
+        <input type="hidden" value="" name="ref_url">
+        <input name="nchash" type="hidden" value="d81f1628" />
+        <input type="hidden" name="form_submit" value="ok" />
+         <input type="hidden" value="" name="zmr">
+      </form>
+      <div class="clear"></div>
+    </div>
+    <div class="nc-login-bottom"></div>
+  </div>
+  <div class="nc-login-left">
+    <h3>注册之后您可以</h3>
+    <ol>
+      <li class="ico05"><i></i>购买商品支付订单</li>
+      <li class="ico01"><i></i>申请开店销售商品</li>
+      <li class="ico03"><i></i>空间好友推送分享</li>
+      <li class="ico02"><i></i>收藏商品关注店铺</li>
+      <li class="ico06"><i></i>商品咨询服务评价</li>
+      <li class="ico04"><i></i>安全交易诚信无忧</li>
+      <div class="clear"></div>
+    </ol>
+    <h3 class="mt20">如果您是本站用户</h3>
+    <div class="nc-login-now mt10"><span class="ml20">我已经注册过账号，立即<a href="index.php?act=login&ref_url=http%3A%2F%2Fwww.mallvv.com%2F" title="" class="register">登录</a></span><span>或是<a class="forget" href="index.php?act=login&op=forget_password">找回密码？</a></span></div>
+  </div>
+</div>
+</div>
+</div>-->
+<div class="head-register">
+	<div class="wrapper clearfix posRelative">
+		<ul class="head-register-right">
+			<li>
+				<a href="http://www.mallvv.com/shop/article_cate-2.html">帮助中心</a>
+			</li>
+			<li>
+				<a href="http://www.mallvv.com/shop/index.php?act=article&amp;article_id=22">关于我们</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<link href="./为为商城 - 用户注册_files/home_header.css" rel="stylesheet" type="text/css">
+<div class="register-wrap wrapper">
+	<div class="register-bt">
+		<ul>
+			<li class="register-bt-active">
+				<span>1</span>
+				<p>设置用户名</p>
+			</li>
+			<li>
+				<span>2</span>
+				<p>填写账号信息</p>
+			</li>
+			<li>
+				<span>3</span>
+				<p>注册成功</p>
+			</li>
+		</ul>
+	</div>	<form action="http://www.mallvv.com/shop/index.php?act=login&amp;op=register" method="post" class="register-style" id="register-Index" novalidate="novalidate">
+		<input type="hidden" name="formhash" value="f1NjWc8lkbelkrGc7eQt06Sf5rabEoT">		<input type="hidden" name="form_submit" value="ok">
+		<input name="nchash" type="hidden" value="d81f1628">
+		<div class="clearfix">
+			<i class="register-icon1"></i>
+			<input type="text" name="mobile" id="mobile" placeholder="请输入您的手机号码">
+			<label></label>
+		</div>
+        <div class="border-none clearfix">
+            <div class="clearfix yzm">
+                <i class="register-icon2"></i>
+                <input type="text" name="captcha" autocomplete="off" class="text w100 fl" id="captcha" maxlength="4" size="10" placeholder="请输入验证码">
+                <img src="./为为商城 - 用户注册_files/index.php" name="codeimage" border="0" id="codeimage" class="fl ml5"> <a href="javascript:void(0)" class="ml5" onclick="javascript:document.getElementById(&#39;codeimage&#39;).src=&#39;http://www.mallvv.com/shop/index.php?act=seccode&amp;op=makecode&amp;nchash=d81f1628&amp;t=&#39; + Math.random();">&nbsp;&nbsp;</a>
+                <label id="captcha_laber" class="error"></label>
+            </div>   	
+		</div>
+		<div class="border-none clearfix">
+			<div class="border-small">
+				<i class="register-icon2"></i>
+				<input type="text" name="validCode" id="validCode" placeholder="请输入手机验证码 " class="input-small">
+				<label></label>
+			</div>
+			<input type="button" id="btn-get-code" value="获取手机验证码" class="yanzhengma">
+			<!--<p class="code-success">验证码10分钟内有效</p>-->
+		</div>
+		<div class="border-none clearfix agree-wrap">
+			<!--
+			<input name="agree" type="checkbox" class="vm ml10" id="clause" value="1" checked="checked" />
+			<span for="clause" class="ml5">阅读并同意			<a href="http://www.mallvv.com/shop/document-agreement.html" target="_blank" class="agreement" title="阅读并同意">服务协议</a>
+			</span>
+			<label></label>
+			-->
+			<input type="checkbox" name="agree" id="agree" value="1" checked="checked">
+			<label for="agree"></label>
+			<p>我已阅读并同意<a href="http://www.mallvv.com/shop/document-agreement.html" target="_blank" class="agreement" title="阅读并同意">服务协议</a></p>
+			<label></label>
+		</div>
+		<div class="border-none clearfix">
+			<input type="submit" name=" " id=" " value="下一步 " class="button-break">
+		</div>
+	</form>
+</div>
+
+
+<script type="text/javascript" src="./为为商城 - 用户注册_files/jquery.poshytip.min.js.下载" charset="utf-8"></script> 
+<script>
+function test(){
+	//alert(($("#test").val()))	
+	var word=($("#test").val());
+	$.ajax({ 
+			async:true,
+			url: "http://www.homevv.com/index.php?m=ajaxApi&c=test&a=checkword",
+			type: 'GET',
+			dataType:"jsonp",
+			jsonp:"jsoncallback",
+			jsonpCallback:"success_jsonpCallback",
+			data: {word:word},
+			success : function(json){
+				if(json[0].error==0){
+					alert("可以使用")
+				}
+				if(json[0].error==1){
+					alert("内容含有敏感词")
+				}
+				if(json[0].error==2){
+					alert("无效验证")
+				}
+			},
+			error:function(){
+			 	alert('fail');
+			}
+		});
+	
+}
+//验证码延时函数
+	var _wait = 120;
+	function time(o) {
+		if (_wait == 0) {
+			o.val("获取验证码");
+			o.css("color","#fff");
+			o.css("background-color","#ffa500");
+			_wait = 120;
+//			$(".code-success").css("display","none");
+			$("#btn-get-code").attr("disabled",false);
+			_flag = true;
+
+		} else {
+			o.val("重新发送(" + _wait + ")");
+			o.css("color","#999");
+			o.css("background-color","#ddd");
+			_wait--;
+			$("#btn-get-code").attr("disabled",true);
+			setTimeout(function() {
+				_flag = false;
+				time(o);
+			},1000)
+		}
+	}
+
+
+$(function(){
+	$("#register-Index").validate({
+		errorPlacement: function(error, element){
+			var error_td = element.parent();
+			error_td.find('label').hide();
+			error_td.append(error);
+		},
+		onkeyup: false,
+		rules : {
+			mobile : {
+				required : true,
+				number:true,
+				rangelength:[11,11]/*,
+				remote   : {
+					url :'index.php?act=login&op=checkMobile',
+					type:'get',
+					dataType:'json',
+					data:{
+						mobile : function(){
+							return $('#mobile').val();
+						}
+					}
+				}*/
+			},
+			validCode : {
+				required : true,
+				rangelength:[6,6],
+				remote:{
+					url:"index.php?act=login&op=check_code",
+					type:'get',
+					data:{
+						mobile:function(){
+							return $("#mobile").val();
+						},
+						validCode:function(){
+							return $("#validCode").val();
+						}
+					}
+				}
+			},
+			agree : {
+				required : true
+			}
+		},
+		messages : {
+			mobile : {
+				required : '手机号码不能为空',
+				number:'请输入11位正确手机号码',
+				rangelength	 : '请输入11位正确手机号码'/*,
+				remote :'手机号码错误或手机号码已存在'*/
+			},
+			validCode  : {
+				required : '手机验证码不能为空',
+				rangelength:'手机验证码为6位数字',
+				remote:'手机验证码错误'
+			},
+			agree : {
+				required : '请阅读并同意该协议'
+			}
+		}
+	});
+
+
+	//发送验证码
+	$("#btn-get-code").click(function(){
+
+		var _mobile = parseFloat($("#mobile").val()).toString();
+		// 匹配移动手机 ?
+		var PATTERN_CHINAMOBILE = /^1(3[4-9]|5[012789]|8[23478]|4[7]|7[80])\d{8}$/
+		// 匹配联 ? 手机号
+		var PATTERN_CHINAUNICOM =/^1(3[0-2]|5[56]|8[56]|4[5]|7[6])\d{8}$/;
+		// 匹配电信手机 ?
+		var PATTERN_CHINATELECOM =/^1(3[3])|(8[019])\d{8}$/;
+		if(_mobile == "" || _mobile =="NaN"){
+			alert("请输入手机号码!")
+			return false;
+		}
+		else if(_mobile.length != 11){
+			alert("请正确输入手机号码!")
+			return false;
+		}
+		else if(!PATTERN_CHINATELECOM.test(_mobile) && !PATTERN_CHINAUNICOM.test(_mobile) && !PATTERN_CHINAMOBILE.test(_mobile)){
+			alert("请正确输入手机号码!")
+			return false;
+		}
+		var url='http://www.mallvv.com/shop/index.php?act=seccode&op=check_register&nchash=d81f1628';
+		var captcha=$('#captcha').val();
+		var mobile=$("#mobile").val();
+		if(captcha==""){
+			alert("请输入验证码!")
+			return false;
+		}
+		
+		$.ajax({ //判断验证码是否正确
+			async:true,
+			url: url,
+			type: 'get',
+			dataType:"JSON",
+			data: {
+				captcha:captcha,
+				mobile:mobile,
+				businessScenes:"USER_REGISTER"
+							},
+			success: function(data) {
+				if (data != false) {
+					$("#captcha_laber").html("")
+					if(data.error=='1'){
+						if(data.result.success=false){
+							alert(data.error_msg+":"+data.result.errorCode)
+						}
+						else{
+							alert(data.error_msg);	
+						}
+						
+					}else{
+						alert("手机验证码发送成功")
+						time($("#btn-get-code"));
+						_wait = 120;
+					}
+				}
+				else{
+					$("#captcha_laber").html("验证码错误")
+					document.getElementById('codeimage').src='http://www.mallvv.com/shop/index.php?act=seccode&op=makecode&nchash=d81f1628& t = ' + Math.random();
+				}
+			}
+		});
+
+
+	});
+})
+
+
+
+	
+
+
+
+
+
+
+
+//注册表单提示
+/*$('.tip').poshytip({
+	className: 'tip-yellowsimple',
+	showOn: 'focus',
+	alignTo: 'target',
+	alignX: 'center',
+	alignY: 'top',
+	offsetX: 0,
+	offsetY: 5,
+	allowTipHover: false
+});
+
+//注册表单验证
+$(function(){
+		jQuery.validator.addMethod("lettersonly", function(value, element) {
+			return this.optional(element) || /^[^:%,'\*\"\s\<\>\&]+$/i.test(value);
+		}, "Letters only please");
+		jQuery.validator.addMethod("lettersmin", function(value, element) {
+			return this.optional(element) || ($.trim(value.replace(/[^\u0000-\u00ff]/g,"aa")).length>=3);
+		}, "Letters min please");
+		jQuery.validator.addMethod("lettersmax", function(value, element) {
+			return this.optional(element) || ($.trim(value.replace(/[^\u0000-\u00ff]/g,"aa")).length<=15);
+		}, "Letters max please");
+    $("#register_form").validate({
+        errorPlacement: function(error, element){
+            var error_td = element.parent('dd');
+            error_td.find('label').hide();
+            error_td.append(error);
+        },
+        onkeyup: false,
+        rules : {
+            user_name : {
+                required : true,
+                lettersmin : true,
+                lettersmax : true,
+                lettersonly : true,
+                remote   : {
+                    url :'index.php?act=login&op=check_member&column=ok',
+                    type:'get',
+                    data:{
+                        user_name : function(){
+                            return $('#user_name').val();
+                        }
+                    }
+                }
+            },
+            password : {
+                required : true,
+                minlength: 6,
+				maxlength: 20
+            },
+            password_confirm : {
+                required : true,
+                equalTo  : '#password'
+            },
+            email : {
+                required : true,
+                email    : true,
+                remote   : {
+                    url : 'index.php?act=login&op=check_email',
+                    type: 'get',
+                    data:{
+                        email : function(){
+                            return $('#email').val();
+                        }
+                    }
+                }
+            },
+			            captcha : {
+                required : true,
+                remote   : {
+                    url : 'index.php?act=seccode&op=check&nchash=d81f1628',
+                    type: 'get',
+                    data:{
+                        captcha : function(){
+                            return $('#captcha').val();
+                        }
+                    },
+                    complete: function(data) {
+                        if(data.responseText == 'false') {
+                        	document.getElementById('codeimage').src='http://www.mallvv.com/shop/index.php?act=seccode&op=makecode&nchash=d81f1628&t=' + Math.random();
+                        }
+                    }
+                }
+            },
+			            agree : {
+                required : true
+            }
+        },
+        messages : {
+            user_name : {
+                required : '用户名不能为空',
+                lettersmin : '用户名必须在3-15个字符之间',
+                lettersmax : '用户名必须在3-15个字符之间',
+				lettersonly: '用户名不能包含敏感字符',
+				remote	 : '该用户名已经存在'
+            },
+            password  : {
+                required : '密码不能为空',
+                minlength: '密码长度应在6-20个字符之间',
+				maxlength: '密码长度应在6-20个字符之间'
+            },
+            password_confirm : {
+                required : '请再次输入您的密码',
+                equalTo  : '两次输入的密码不一致'
+            },
+            email : {
+                required : '电子邮箱不能为空',
+                email    : '这不是一个有效的电子邮箱',
+				remote	 : '该电子邮箱已经存在'
+            },
+			            captcha : {
+                required : '请输入验证码',
+				remote	 : '验证码不正确'
+            },
+			            agree : {
+                required : '请阅读并同意该协议'
+            }
+        }
+    });
+});*/
+</script><div id="faq">
+  <div class="faq-wrapper">
+  	
+        	
+    	<div class="faq-left">
+  		<h2>客服在线</h2>
+  		<div class="faq-con">
+  			<h2>021-56457299</h2>
+  			<span>周一到周五9:00-17:30</span>
+  			<!--<p><a href="mailto:kefu@homevv.cn">E-mail:kefu@homevv.cn</a></p>-->
+  		</div>
+  	</div>
+  	
+    	<ul>
+           <li> <dl class="s1">
+      <dt>
+        帮助中心      </dt>
+                  <dd><i></i><a href="http://www.mallvv.com/shop/article-8.html" title="忘记密码" rel="nofollow"> 忘记密码 </a></dd>
+            <dd><i></i><a href="http://www.mallvv.com/shop/article-40.html" title="积分兑换说明" rel="nofollow"> 积分兑换说明 </a></dd>
+            <dd><i></i><a href="http://www.mallvv.com/shop/article-39.html" title="积分细则" rel="nofollow"> 积分细则 </a></dd>
+                </dl></li>
+               <li> <dl class="s2">
+      <dt>
+        店主之家      </dt>
+                  <dd><i></i><a href="http://www.mallvv.com/shop/article-15.html" title="如何申请开店" rel="nofollow"> 如何申请开店 </a></dd>
+                </dl></li>
+               <li> <dl class="s3">
+      <dt>
+        支付方式      </dt>
+                  <dd><i></i><a href="http://www.mallvv.com/shop/article-17.html" title="在线支付" rel="nofollow"> 在线支付 </a></dd>
+                </dl></li>
+               <li> <dl class="s4">
+      <dt>
+        售后服务      </dt>
+                  <dd><i></i><a href="http://www.mallvv.com/shop/article-31.html" title="退换货政策" rel="nofollow"> 退换货政策 </a></dd>
+            <dd><i></i><a href="http://www.mallvv.com/shop/article-34.html" title="退款申请" rel="nofollow"> 退款申请 </a></dd>
+            <dd><i></i><a href="http://www.mallvv.com/shop/article-32.html" title="退换货流程" rel="nofollow"> 退换货流程 </a></dd>
+                </dl></li>
+               <li> <dl class="s5">
+      <dt>
+        客服中心      </dt>
+                  <dd><i></i><a href="http://www.mallvv.com/shop/article-18.html" title="会员修改密码" rel="nofollow"> 会员修改密码 </a></dd>
+            <dd><i></i><a href="http://www.mallvv.com/shop/article-19.html" title="会员修改个人资料" rel="nofollow"> 会员修改个人资料 </a></dd>
+                </dl></li>
+               <li> <dl class="s6">
+      <dt>
+        关于我们      </dt>
+                  <dd><i></i><a href="http://www.mallvv.com/shop/article-23.html" title="联系我们" rel="nofollow"> 联系我们 </a></dd>
+            <dd><i></i><a href="http://www.mallvv.com/shop/article-25.html" title="合作及洽谈" rel="nofollow"> 合作及洽谈 </a></dd>
+            <dd><i></i><a href="http://www.mallvv.com/shop/article-22.html" title="关于我们" rel="nofollow"> 关于我们 </a></dd>
+            <dd><i></i><a href="http://www.mallvv.com/shop/article-24.html" title="招聘英才" rel="nofollow"> 招聘英才 </a></dd>
+                </dl></li>
+        	    	
+	</ul>	
+<div class="help">
+	<ul>
+		<li>
+		<h2>为为网APP</h2>
+		<i class="weixin-img1"></i>
+		<p>下载移动客户端</p>
+	</li>
+		<li>
+		<h2>为为网微信</h2>
+		<i class="weixin-img2"></i>
+		<p>为为网官方微信</p>
+	</li>
+</ul>
+	</div>			
+      </div>
+</div>
+<div id="footer" class="wrapper">
+  <p><a title="为为商城首页" href="http://www.mallvv.com/shop">首页</a>
+                | <a href="http://www.mallvv.com/shop/index.php?act=article&amp;article_id=24" rel="nofollow">招聘英才</a>
+                | <a href="http://www.mallvv.com/shop/index.php?act=article&amp;article_id=25" rel="nofollow">合作及洽谈</a>
+                | <a href="http://www.mallvv.com/shop/index.php?act=article&amp;article_id=23" rel="nofollow">联系我们</a>
+                | <a href="http://www.mallvv.com/shop/index.php?act=article&amp;article_id=22" rel="nofollow">关于我们</a>
+                        | <a href="http://www.mallvv.com/shop/index.php?act=link" rel="nofollow">友情链接</a>
+                              </p>
+  Copyright 2015 沪ICP备08001311号 | 营业执照<br>
+   </div>
+<script type="text/javascript" src="./为为商城 - 用户注册_files/jquery.cookie.js.下载"></script>
+<link href="./为为商城 - 用户注册_files/perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./为为商城 - 用户注册_files/perfect-scrollbar.min.js.下载"></script>
+<script type="text/javascript" src="./为为商城 - 用户注册_files/jquery.qtip.min.js.下载"></script>
+<link href="./为为商城 - 用户注册_files/jquery.qtip.min.css" rel="stylesheet" type="text/css">
+<!-- 对比 -->
+<script src="./为为商城 - 用户注册_files/compare.js.下载"></script>
+<script type="text/javascript">$(function() {
+	// Membership card
+	$('[nctype="mcard"]').membershipCard({
+		type: 'shop'
+	});
+});</script>
+
+
+</body></html>
